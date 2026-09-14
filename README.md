@@ -1,16 +1,142 @@
-# React + Vite
+# 💱 Currency Converter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and responsive **Currency Converter** built using **React.js**.
+It allows users to convert an amount from one currency to another using real-time exchange rates fetched from a currency API.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* 💱 Convert currencies easily
+* 🔄 Swap From and To currencies
+* 🌍 Supports multiple currencies
+* 📡 Fetches exchange rates from an API
+* ⚡ Fast and responsive interface
+* 🎨 Clean and simple UI
+* ⚛️ Built with React Hooks
+* 🧩 Custom `useCurrencyInfo` hook
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **React.js**
+* **JavaScript**
+* **CSS**
+* **Vite**
+* **Currency API**
 
-## Expanding the ESLint configuration
+## 📂 Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```text
+currency-converter/
+│
+├── public/
+│
+├── src/
+│   ├── components/
+│   │   ├── Inputs.jsx
+│   │   └── input.css
+│   │
+│   ├── hooks/
+│   │   └── useCurrencyInfo.js
+│   │
+│   ├── App.jsx
+│   ├── App.css
+│   └── main.jsx
+│
+├── .gitignore
+├── package.json
+├── package-lock.json
+└── README.md
+```
+
+## 🔧 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/YOUR-USERNAME/currency-converter.git
+```
+
+Move into the project directory:
+
+```bash
+cd currency-converter
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+The application will run locally on the Vite development server.
+
+## 💡 How It Works
+
+The application uses a custom React hook called `useCurrencyInfo` to fetch currency exchange rates from the API.
+
+The selected **From Currency** is used to fetch its exchange rates.
+
+For example:
+
+```js
+currencyInfo[from]?.[to]
+```
+
+gets the exchange rate between the selected currencies.
+
+The converted amount is calculated using:
+
+```js
+amount * currencyInfo[from]?.[to]
+```
+
+## 🔄 Currency Swap
+
+The swap button exchanges the selected currencies.
+
+For example:
+
+```text
+USD → INR
+```
+
+becomes:
+
+```text
+INR → USD
+```
+
+
+```text
+![Currency Converter Screenshot](./screenshot.png)
+```
+
+## 📚 Learning Outcomes
+
+While building this project, I practiced:
+
+* React `useState`
+* React `useEffect`
+* Custom Hooks
+* Props
+* Controlled Components
+* Event Handling
+* API Fetching
+* Optional Chaining
+* Conditional Rendering
+* Component Reusability
+
+## 👨‍💻 Author
+
+**Sonu Kumar**
+
+GitHub: `https://github.com/5onu-hub`
+
+---
+
+⭐ If you found this project useful, feel free to give it a star!
