@@ -112,9 +112,6 @@ INR → USD
 ```
 
 
-```text
-![Currency Converter Screenshot](./screenshot.png)
-```
 
 ## 📚 Learning Outcomes
 
